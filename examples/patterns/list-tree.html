@@ -1,0 +1,48 @@
+---
+layout: default
+title: List tree
+category: _patterns
+---
+
+<div class="strip">
+  <div class="row">
+    <div class="col-12">
+      <h1>List tree</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <h2>Closed</h2>
+      <ul class="p-list-tree">
+        <li class="p-list-tree__item p-list-tree__item--group">
+          /folder
+          <ul class="p-list-tree" aria-expanded="true">
+            <li class="p-list-tree__item">file</li>
+          </ul>
+        </li>
+        <li class="p-list-tree__item">
+          charm-helpers-sync.yaml
+        </li>
+        <li class="p-list-tree__item">
+          config.yaml
+        </li>
+        <li class="p-list-tree__item p-list-tree__item--group">
+          /files
+          <ul class="p-list-tree" aria-expanded="false">
+            <li class="p-list-tree__item">default_rsync</li>
+            <li class="p-list-tree__item">nagios_plugin.py</li>
+            <li class="p-list-tree__item p-list-tree__item--group">
+              /plugins
+              <ul class="p-list-tree" aria-expanded="false">
+                <li class="p-list-tree__item">check_mem.pl</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-6">
+      <h2>Open</h2>
+    </div>
+  </div>
+</div>
