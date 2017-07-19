@@ -3,3 +3,26 @@ layout: default
 title: Accordion
 category: _patterns
 ---
+
+<aside class="p-accordion" role="tablist" aria-multiselect="true">
+    <ul class="p-accordion__list">
+        <li class="p-accordion__group">
+            <button class="p-accordion__header" id="owner-tab" role="tab" aria-controls="owner" aria-expanded="true" aria-selected="true">Owner</button>
+            <section class="p-accordion__panel" id="owner" role="tabpanel" aria-hidden="false" aria-labelledby="owner-tab">
+
+            </section>
+        </li>
+        <li class="p-accordion__group">
+            <button class="p-accordion__header" id="status-tab" role="tab" aria-controls="status" aria-expanded="false" aria-selected="false">Status</button>
+            <section class="p-accordion__panel" id="status" role="tabpanel" hidden aria-hidden="true" aria-labelledby="status-tab">
+
+            </section>
+        </li>
+        <li class="p-accordion__group">
+            <button class="p-accordion__header" id="tags-tab" role="tab" aria-controls="tags" aria-expanded="false" aria-selected="false">Tags</button>
+            <section class="p-accordion__panel" id="tags" role="tabpanel" hidden aria-hidden="true" aria-labelledby="tags-tab">
+
+            </section>
+        </li>
+    </ul>
+</aside>
