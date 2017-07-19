@@ -1,8 +1,44 @@
 @import 'settings';
 
 @mixin theme-p-table-sorting {
+
+  @mixin heading-icon {
+    background: {
+      position: center;
+      repeat: no-repeat;
+      size: 100%;
+    }
+    content: ' ';
+    display: inline-block;
+    height: .4rem;
+    margin-left: $sp-x-small;
+    vertical-align: middle;
+    width: $sp-medium;
+  }
+
   .p-table-sorting {
+    th[role="columnheader"] {
 
+      &[aria-sort] {
+        align-items: center;
+        cursor: pointer;
+        white-space: nowrap;
+      }
 
+      &[aria-sort="ascending"]::after {
+        @include heading-icon;
+        background-image: url('#{$assets-path}f3f43376-chevron_up.svg');
+      }
+
+      &[aria-sort="descending"]::after {
+        @include heading-icon;
+        background-image: url('#{$assets-path}04d2075a-chevron_down.svg');
+      }
+
+      &[aria-sort]:hover {
+        color: $color-link;
+        text-decoration: underline;
+      }
+    }
   }
 }

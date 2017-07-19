@@ -4,33 +4,98 @@ title: Table sorting
 category: _patterns
 ---
 
+<h2>No sort</h2>
 <table class="p-table-sorting" role="grid">
   <thead>
     <tr role="row">
       <th scope="col" role="columnheader" id="t-name" aria-sort="none">Name</th>
-      <th scope="col" role="columnheader" id="t-users" aria-sort="none">Users</th>
-      <th scope="col" role="columnheader" id="t-units" aria-sort="none">Units</th>
-      <th scope="col" role="columnheader" id="t-revenue" aria-sort="none">Revenue</th>
+      <th scope="col" role="columnheader" id="t-users" aria-sort="none" class="u-align--right">Users</th>
+      <th scope="col" role="columnheader" id="t-units" aria-sort="none" class="u-align--right">Units</th>
+      <th scope="col" role="columnheader" id="t-revenue" aria-sort="none" class="u-align--right">Revenue</th>
     </tr>
   </thead>
   <tbody>
     <tr role="row">
       <td role="rowheader">Grape</td>
-      <td role="gridcell">8</td>
-      <td role="gridcell">19</td>
-      <td role="gridcell">$70</td>
+      <td role="gridcell" class="u-align--right">8</td>
+      <td role="gridcell" class="u-align--right">19</td>
+      <td role="gridcell" class="u-align--right">$70</td>
     </tr>
     <tr role="row">
       <td role="rowheader">Melon</td>
-      <td role="gridcell">12</td>
-      <td role="gridcell">23</td>
-      <td role="gridcell">$99</td>
+      <td role="gridcell" class="u-align--right">12</td>
+      <td role="gridcell" class="u-align--right">23</td>
+      <td role="gridcell" class="u-align--right">$99</td>
     </tr>
     <tr role="row">
       <td role="rowheader">Apple</td>
-      <td role="gridcell">9</td>
-      <td role="gridcell">17</td>
-      <td role="gridcell">$120</td>
+      <td role="gridcell" class="u-align--right">9</td>
+      <td role="gridcell" class="u-align--right">17</td>
+      <td role="gridcell" class="u-align--right">$120</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Sort ascending</h2>
+<table class="p-table-sorting" role="grid">
+  <thead>
+    <tr role="row">
+      <th scope="col" role="columnheader" id="t-name" aria-sort="ascending">Name</th>
+      <th scope="col" role="columnheader" id="t-users" aria-sort="none" class="u-align--right">Users</th>
+      <th scope="col" role="columnheader" id="t-units" aria-sort="none" class="u-align--right">Units</th>
+      <th scope="col" role="columnheader" id="t-revenue" aria-sort="none" class="u-align--right">Revenue</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr role="row">
+      <td role="rowheader">Apple</td>
+      <td role="gridcell" class="u-align--right">9</td>
+      <td role="gridcell" class="u-align--right">17</td>
+      <td role="gridcell" class="u-align--right">$120</td>
+    </tr>
+    <tr role="row">
+      <td role="rowheader">Grape</td>
+      <td role="gridcell" class="u-align--right">8</td>
+      <td role="gridcell" class="u-align--right">19</td>
+      <td role="gridcell" class="u-align--right">$70</td>
+    </tr>
+    <tr role="row">
+      <td role="rowheader">Melon</td>
+      <td role="gridcell" class="u-align--right">12</td>
+      <td role="gridcell" class="u-align--right">23</td>
+      <td role="gridcell" class="u-align--right">$99</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Sort descending</h2>
+<table class="p-table-sorting" role="grid">
+  <thead>
+    <tr role="row">
+      <th scope="col" role="columnheader" id="t-name" aria-sort="descending">Name</th>
+      <th scope="col" role="columnheader" id="t-users" aria-sort="none" class="u-align--right">Users</th>
+      <th scope="col" role="columnheader" id="t-units" aria-sort="none" class="u-align--right">Units</th>
+      <th scope="col" role="columnheader" id="t-revenue" aria-sort="none" class="u-align--right">Revenue</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr role="row">
+      <td role="rowheader">Melon</td>
+      <td role="gridcell" class="u-align--right">12</td>
+      <td role="gridcell" class="u-align--right">23</td>
+      <td role="gridcell" class="u-align--right">$99</td>
+    </tr>
+    <tr role="row">
+      <td role="rowheader">Grape</td>
+      <td role="gridcell" class="u-align--right">8</td>
+      <td role="gridcell" class="u-align--right">19</td>
+      <td role="gridcell" class="u-align--right">$70</td>
+    </tr>
+    <tr role="row">
+      <td role="rowheader">Apple</td>
+      <td role="gridcell" class="u-align--right">9</td>
+      <td role="gridcell" class="u-align--right">17</td>
+      <td role="gridcell" class="u-align--right">$120</td>
     </tr>
   </tbody>
 </table>
