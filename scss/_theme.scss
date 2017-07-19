@@ -10,6 +10,7 @@
 // Import Pattern files, if needed
 @import
 'patterns_contextual-menu',
+'patterns_table-sorting',
 'patterns_tabs',
 'patterns_tooltips';
 
@@ -22,6 +23,7 @@
 
   //  Include Pattern mixins, if needed
   @include theme-p-contextual-menu;
+  @include theme-p-table-sorting;
   @include theme-p-tabs;
   @include theme-p-tooltips;
 
