@@ -2,34 +2,35 @@
 
 @mixin theme-p-modal {
   .p-modal {
-    @extend .p-card--highlighted;
+    align-items: center;
+    background: transparentize($color-dark, .25);
+    content: '';
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    overflow: scroll;
     position: absolute;
+    top: 0;
+    width: 100%;
 
-    &::before {
-      -webkit-overflow-scrolling: touch;
-      background: transparentize($color-dark, .25);
-      height: 100vh;
-      left: 0;
-      overflow: scroll;
+    &__dialog {
+      @extend .p-card--highlighted;
+      max-width: $grid-max-width;
       position: absolute;
-      top: 0;
-      width: 100%;
+      width: auto;
     }
 
     &__header {
-
+      margin: 0;
     }
 
     &__title {
-
+      margin: 0;
     }
 
     &__close {
-
-    }
-
-    &__content {
-
+      margin: 0;
     }
   }
 }
