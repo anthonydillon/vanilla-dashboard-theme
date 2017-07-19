@@ -5,7 +5,7 @@
     border-left: 1px solid $color-mid-light;
     list-style-type: none;
     margin-left: 1rem;
-    padding-left: .5rem;
+    padding: 0 0 .3125rem .5rem;
 
     &__item {
       margin-top: .26rem;
@@ -13,10 +13,13 @@
       position: relative;
 
       &--group::after {
-        background-image: url("//assets.ubuntu.com/v1/52ee7ac2-tree-open.svg");
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="a" d="M0 0h15v15H0z"/></defs><g fill="none" fill-rule="evenodd"><use fill="#FFF" xlink:href="#a"/><path stroke="#888" d="M.5.5h14v14H.5z"/><path fill="#888" d="M7 4h1v7H7z"/><path fill="#888" d="M4 8V7h7v1z"/></g></svg>');
+        background-position: center;
+        background-repeat: no-repeat;
+        content: ' ';
         display: block;
         height: .9375rem;
-        left: -.9rem;
+        left: -1rem;
         position: absolute;
         top: .4rem;
         width: .9375rem;
@@ -32,9 +35,18 @@
         top: .8rem;
         width: 10px;
       }
+
+      &--group[aria-expanded="true"]::after {
+        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="a" d="M0 0h15v15H0z"/></defs><g fill="none" fill-rule="evenodd"><use fill="#FFF" xlink:href="#a"/><path stroke="#888" d="M.5.5h14v14H.5z"/><path fill="#888" d="M4 8V7h7v1z"/></g></svg>');
+      }
+
+      &[aria-expanded="true"] .p-list-tree {
+        display: block;
+      }
     }
 
     .p-list-tree {
+      display: none;
       margin-left: 0;
     }
   }

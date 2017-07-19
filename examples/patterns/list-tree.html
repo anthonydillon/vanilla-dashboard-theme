@@ -16,7 +16,7 @@ category: _patterns
       <ul class="p-list-tree">
         <li class="p-list-tree__item p-list-tree__item--group">
           /folder
-          <ul class="p-list-tree" aria-expanded="true">
+          <ul class="p-list-tree">
             <li class="p-list-tree__item">file</li>
           </ul>
         </li>
@@ -24,16 +24,16 @@ category: _patterns
           charm-helpers-sync.yaml
         </li>
         <li class="p-list-tree__item">
-          config.yaml
+          <a href="#" class="link">config.yaml</a>
         </li>
         <li class="p-list-tree__item p-list-tree__item--group">
           /files
-          <ul class="p-list-tree" aria-expanded="false">
+          <ul class="p-list-tree">
             <li class="p-list-tree__item">default_rsync</li>
             <li class="p-list-tree__item">nagios_plugin.py</li>
             <li class="p-list-tree__item p-list-tree__item--group">
               /plugins
-              <ul class="p-list-tree" aria-expanded="false">
+              <ul class="p-list-tree">
                 <li class="p-list-tree__item">check_mem.pl</li>
               </ul>
             </li>
@@ -43,6 +43,34 @@ category: _patterns
     </div>
     <div class="col-6">
       <h2>Open</h2>
+      <ul class="p-list-tree">
+        <li class="p-list-tree__item p-list-tree__item--group" aria-expanded="true">
+          /folder
+          <ul class="p-list-tree">
+            <li class="p-list-tree__item">file</li>
+          </ul>
+        </li>
+        <li class="p-list-tree__item">
+          charm-helpers-sync.yaml
+        </li>
+        <li class="p-list-tree__item">
+          <a href="#" class="link">config.yaml</a>
+        </li>
+        <li class="p-list-tree__item p-list-tree__item--group" aria-expanded="true">
+          /files
+          <ul class="p-list-tree">
+            <li class="p-list-tree__item">default_rsync</li>
+            <li class="p-list-tree__item">nagios_plugin.py</li>
+            <li class="p-list-tree__item p-list-tree__item--group" aria-expanded="true">
+              /plugins
+              <ul class="p-list-tree">
+                <li class="p-list-tree__item">check_mem.pl</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
     </div>
   </div>
 </div>
