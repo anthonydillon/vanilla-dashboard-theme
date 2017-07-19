@@ -15,7 +15,7 @@ category: _patterns
       <h2>Closed</h2>
       <ul class="p-list-tree">
         <li class="p-list-tree__item p-list-tree__item--group">
-          <a href="#" class="p-link--strong">/folder</a>
+          <button class="p-list-tree__toggle">/folder</button>
           <ul class="p-list-tree">
             <li class="p-list-tree__item">file</li>
           </ul>
@@ -27,12 +27,12 @@ category: _patterns
           <a href="#" class="p-link--strong">config.yaml</a>
         </li>
         <li class="p-list-tree__item p-list-tree__item--group">
-          <a href="#" class="p-link--strong">/files</a>
+          <button class="p-list-tree__toggle">/files</button>
           <ul class="p-list-tree">
             <li class="p-list-tree__item">default_rsync</li>
             <li class="p-list-tree__item">nagios_plugin.py</li>
             <li class="p-list-tree__item p-list-tree__item--group">
-              <a href="#" class="p-link--strong">/plugins</a>
+              <button class="p-list-tree__toggle">/plugins</button>
               <ul class="p-list-tree">
                 <li class="p-list-tree__item">check_mem.pl</li>
               </ul>
@@ -44,9 +44,9 @@ category: _patterns
     <div class="col-6">
       <h2>Open</h2>
       <ul class="p-list-tree">
-        <li class="p-list-tree__item p-list-tree__item--group" aria-expanded="true">
-          <a href="#" class="p-link--strong">/folder</a>
-          <ul class="p-list-tree">
+        <li class="p-list-tree__item p-list-tree__item--group" >
+          <button class="p-list-tree__toggle">/folder</button>
+          <ul class="p-list-tree" aria-expanded="true">
             <li class="p-list-tree__item">file</li>
           </ul>
         </li>
@@ -56,14 +56,14 @@ category: _patterns
         <li class="p-list-tree__item">
           <a href="#" class="p-link--strong">config.yaml</a>
         </li>
-        <li class="p-list-tree__item p-list-tree__item--group" aria-expanded="true">
-          <a href="#" class="p-link--strong">/files</a>
-          <ul class="p-list-tree">
+        <li class="p-list-tree__item p-list-tree__item--group">
+          <button class="p-list-tree__toggle">/files</button>
+          <ul class="p-list-tree" aria-expanded="true">
             <li class="p-list-tree__item">default_rsync</li>
             <li class="p-list-tree__item">nagios_plugin.py</li>
-            <li class="p-list-tree__item p-list-tree__item--group" aria-expanded="true">
-              <a href="#" class="p-link--strong">/plugins</a>
-              <ul class="p-list-tree">
+            <li class="p-list-tree__item p-list-tree__item--group">
+              <button class="p-list-tree__toggle">/plugins</button>
+              <ul class="p-list-tree" aria-expanded="true">
                 <li class="p-list-tree__item">check_mem.pl</li>
               </ul>
             </li>

@@ -1,6 +1,21 @@
 @import 'settings';
 
 @mixin theme-p-list-tree {
+  @mixin list-tree-icon {
+    background: {
+      position: center;
+      repeat: no-repeat;
+    }
+    content: ' ';
+    display: block;
+    height: .9375rem;
+    left: -1rem;
+    pointer-events: none;
+    position: absolute;
+    top: .4rem;
+    width: .9375rem;
+  }
+
   .p-list-tree {
     border-left: 1px solid $color-mid-light;
     list-style-type: none;
@@ -12,42 +27,53 @@
       padding-left: .8rem;
       position: relative;
 
-      &--group::after {
-        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="a" d="M0 0h15v15H0z"/></defs><g fill="none" fill-rule="evenodd"><use fill="#FFF" xlink:href="#a"/><path stroke="#888" d="M.5.5h14v14H.5z"/><path fill="#888" d="M7 4h1v7H7z"/><path fill="#888" d="M4 8V7h7v1z"/></g></svg>');
-        background-position: center;
-        background-repeat: no-repeat;
-        content: ' ';
-        display: block;
-        height: .9375rem;
-        left: -1rem;
-        position: absolute;
-        top: .4rem;
-        width: .9375rem;
-      }
-
       &::before {
         background: $color-mid-light;
         content: ' ';
         display: block;
         height: 1px;
         left: -.5rem;
+        pointer-events: none;
         position: absolute;
         top: .8rem;
         width: 10px;
       }
 
-      &--group[aria-expanded="true"]::after {
-        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="a" d="M0 0h15v15H0z"/></defs><g fill="none" fill-rule="evenodd"><use fill="#FFF" xlink:href="#a"/><path stroke="#888" d="M.5.5h14v14H.5z"/><path fill="#888" d="M4 8V7h7v1z"/></g></svg>');
+      &--group::after {
+        @include list-tree-icon;
+        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="a" d="M0 0h15v15H0z"/></defs><g fill="none" fill-rule="evenodd"><use fill="#FFF" xlink:href="#a"/><path stroke="#888" d="M.5.5h14v14H.5z"/><path fill="#888" d="M7 4h1v7H7z"/><path fill="#888" d="M4 8V7h7v1z"/></g></svg>');
       }
+    }
 
-      &[aria-expanded="true"] .p-list-tree {
-        display: block;
+    &__toggle {
+      background: transparent;
+      border: 0;
+      font-weight: normal;
+      margin: 0 0 0 -28px;
+      padding: 0 0 0 28px;
+      transition-duration: 0s;
+
+      &:hover {
+        background: transparent;
+        color: $color-link;
+        text-decoration: underline;
       }
     }
 
     .p-list-tree {
       display: none;
       margin-left: 0;
+
+      &[aria-expanded="true"] {
+        display: block;
+      }
+
+      &[aria-expanded="true"]::after {
+        @include list-tree-icon;
+        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="a" d="M0 0h15v15H0z"/></defs><g fill="none" fill-rule="evenodd"><use fill="#FFF" xlink:href="#a"/><path stroke="#888" d="M.5.5h14v14H.5z"/><path fill="#888" d="M4 8V7h7v1z"/></g></svg>');
+        // At this point we need to
+        z-index: 1;
+      }
     }
   }
 }
