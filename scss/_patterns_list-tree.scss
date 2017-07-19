@@ -2,28 +2,29 @@
 
 @mixin theme-p-list-tree {
   @mixin list-tree-icon {
+    $icon-size: .9375rem; // 15px
     background: {
       position: center;
       repeat: no-repeat;
     }
     content: ' ';
     display: block;
-    height: .9375rem;
-    left: -1rem;
+    height: $icon-size;
+    left: -$sp-medium;
     pointer-events: none;
     position: absolute;
     top: .4rem;
-    width: .9375rem;
+    width: $icon-size;
   }
 
   .p-list-tree {
     border-left: 1px solid $color-mid-light;
     list-style-type: none;
-    margin-left: 1rem;
-    padding: 0 0 .3125rem .5rem;
+    margin-left: $sp-medium;
+    padding: 0 0 0 $sp-x-small;
 
     &__item {
-      margin-top: .26rem;
+      margin-top: $sp-xx-small;
       padding-left: .8rem;
       position: relative;
 
@@ -32,7 +33,7 @@
         content: ' ';
         display: block;
         height: 1px;
-        left: -.5rem;
+        left: -$sp-x-small;
         pointer-events: none;
         position: absolute;
         top: .8rem;
@@ -41,7 +42,7 @@
 
       &--group::after {
         @include list-tree-icon;
-        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="a" d="M0 0h15v15H0z"/></defs><g fill="none" fill-rule="evenodd"><use fill="#FFF" xlink:href="#a"/><path stroke="#888" d="M.5.5h14v14H.5z"/><path fill="#888" d="M7 4h1v7H7z"/><path fill="#888" d="M4 8V7h7v1z"/></g></svg>');
+        background-image: url('#{$assets-path}d705d8f6-tree-close.svg');
       }
     }
 
@@ -64,14 +65,14 @@
       display: none;
       margin-left: 0;
 
-      &[aria-expanded="true"] {
+      &[aria-hidden="false"] {
         display: block;
       }
 
-      &[aria-expanded="true"]::after {
+      &[aria-hidden="false"]::after {
         @include list-tree-icon;
-        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="a" d="M0 0h15v15H0z"/></defs><g fill="none" fill-rule="evenodd"><use fill="#FFF" xlink:href="#a"/><path stroke="#888" d="M.5.5h14v14H.5z"/><path fill="#888" d="M4 8V7h7v1z"/></g></svg>');
-        // At this point we need to
+        background-image: url('#{$assets-path}52ee7ac2-tree-open.svg');
+        // At this point we need to push this icon above the --group icon.
         z-index: 1;
       }
     }
