@@ -36,7 +36,7 @@
         pointer-events: none;
         position: absolute;
         top: .8rem;
-        width: 10px;
+        width: .625rem;
       }
 
       &--group::after {
@@ -49,8 +49,8 @@
       background: transparent;
       border: 0;
       font-weight: normal;
-      margin: 0 0 0 -28px;
-      padding: 0 0 0 28px;
+      margin: 0 0 0 -1.75rem;
+      padding: 0 0 0 1.75rem;
       transition-duration: 0s;
 
       &:hover {
