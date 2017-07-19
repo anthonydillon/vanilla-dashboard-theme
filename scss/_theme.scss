@@ -5,21 +5,27 @@
 @import 'settings';
 
 // Import Base files, if needed
+@import 'icons';
 
 // Import Pattern files, if needed
 @import
 'patterns_contextual-menu',
 'patterns_list-tree';
+'patterns_tabs',
+'patterns_tooltips';
 
 // Import Util files, if needed
 
 @mixin vanilla-dashboard-theme {
 
   //  Include Base mixins, if needed
+  @include theme-icons;
 
   //  Include Pattern mixins, if needed
   @include theme-p-contextual-menu;
   @include theme-p-list-tree;
+  @include theme-p-tabs;
+  @include theme-p-tooltips;
 
   // Include Util mixins, if needed
 }
