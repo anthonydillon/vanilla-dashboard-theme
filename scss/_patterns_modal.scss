@@ -1,0 +1,35 @@
+@import 'settings';
+
+@mixin theme-p-modal {
+  .p-modal {
+    @extend .p-card--highlighted;
+    position: absolute;
+
+    &::before {
+      -webkit-overflow-scrolling: touch;
+      background: transparentize($color-dark, .25);
+      height: 100vh;
+      left: 0;
+      overflow: scroll;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    &__header {
+
+    }
+
+    &__title {
+
+    }
+
+    &__close {
+
+    }
+
+    &__content {
+
+    }
+  }
+}
