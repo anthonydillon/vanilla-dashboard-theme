@@ -42,7 +42,7 @@
 
       &--group::after {
         @include list-tree-icon;
-        background-image: url('#{$assets-path}d705d8f6-tree-close.svg');
+        background-image: url('#{$assets-path}52ee7ac2-tree-open.svg');
       }
     }
 
@@ -58,10 +58,6 @@
         background: transparent;
         color: $color-link;
         text-decoration: underline;
-      }
-
-      &:visited {
-        color: $color-dark;
       }
 
       &:focus {
@@ -80,7 +76,7 @@
 
       &[aria-hidden="false"]::after {
         @include list-tree-icon;
-        background-image: url('#{$assets-path}52ee7ac2-tree-open.svg');
+        background-image: url('#{$assets-path}d705d8f6-tree-close.svg');
         // At this point we need to push this icon above the --group icon.
         z-index: 1;
       }
