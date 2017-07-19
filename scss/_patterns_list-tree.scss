@@ -59,6 +59,15 @@
         color: $color-link;
         text-decoration: underline;
       }
+
+      &:visited {
+        color: $color-dark;
+      }
+
+      &:focus {
+        background: transparent;
+        outline: 1px dotted $color-mid-light;
+      }
     }
 
     .p-list-tree {
