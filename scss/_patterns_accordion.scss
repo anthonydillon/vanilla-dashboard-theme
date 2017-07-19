@@ -17,11 +17,11 @@
 
     &__tab {
       background: {
-        position: top $sp-medium right $sp-medium;
+        position: top 1.25rem right $sp-medium;
         repeat: no-repeat;
       }
       border: 0;
-      padding: $sp-small $sp-xx-large $sp-small $sp-small;
+      padding: $sp-medium $sp-xx-large $sp-medium $sp-small;
       text-align: left;
       width: 100%;
       z-index: 2;
@@ -42,8 +42,9 @@
     }
 
     &__panel {
+      border-top: 1px solid $color-mid-light;
       margin: 0;
-      padding: $sp-small;
+      padding: $sp-small $sp-small $sp-small $sp-large;
 
       // Hides panel content
       &[aria-hidden='true'] {
