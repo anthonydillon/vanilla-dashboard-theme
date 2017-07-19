@@ -43,7 +43,7 @@
       border: 0;
       box-sizing: content-box;
       height: $sp-medium;
-      margin: 0;
+      margin: -#{$sp-medium} -#{$sp-medium} 0 0;
       padding: $sp-medium;
       text-indent: -999em;
       width: $sp-medium;
