@@ -1,9 +1,10 @@
 @import 'settings';
 
-@mixin theme-p-table-sorting {
+@mixin theme-p-table-sortable {
 
-  @mixin heading-icon {
+  %heading-icon {
     background: {
+      image: url('#{$assets-path}f3f43376-chevron_up.svg');
       position: center;
       repeat: no-repeat;
       size: 100%;
@@ -16,7 +17,7 @@
     width: $sp-medium;
   }
 
-  .p-table-sorting {
+  .p-table--sortable {
     th[role="columnheader"] {
 
       &[aria-sort] {
@@ -26,13 +27,12 @@
       }
 
       &[aria-sort="ascending"]::after {
-        @include heading-icon;
-        background-image: url('#{$assets-path}f3f43376-chevron_up.svg');
+        @extend %heading-icon;
       }
 
       &[aria-sort="descending"]::after {
-        @include heading-icon;
-        background-image: url('#{$assets-path}04d2075a-chevron_down.svg');
+        @extend %heading-icon;
+        transform: rotate(180deg);
       }
 
       &[aria-sort]:hover {
