@@ -18,6 +18,10 @@
           + .p-form__group {
             margin-top: $sp-small;
           }
+
+          + [class*="p-button"] {
+            margin-top: $sp-large;
+          }
         }
       }
 
@@ -63,7 +67,7 @@
 
           + .p-form__group,
           + [class*="p-button"] {
-            margin-left: $sp-small;
+            margin-left: $sp-large;
           }
 
           .p-form__label,
@@ -75,7 +79,7 @@
 
           .p-form__label {
             flex-shrink: 0;
-            padding-right: $sp-small;
+            padding-right: $sp-medium;
           }
 
           .p-form__control {
