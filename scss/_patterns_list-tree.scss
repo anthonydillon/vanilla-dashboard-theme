@@ -1,0 +1,86 @@
+@import 'settings';
+
+@mixin theme-p-list-tree {
+  @mixin list-tree-icon {
+    $icon-size: .9375rem; // 15px
+    background: {
+      position: center;
+      repeat: no-repeat;
+    }
+    content: ' ';
+    display: block;
+    height: $icon-size;
+    left: -$sp-medium;
+    pointer-events: none;
+    position: absolute;
+    top: .4rem;
+    width: $icon-size;
+  }
+
+  .p-list-tree {
+    border-left: 1px solid $color-mid-light;
+    list-style-type: none;
+    margin-left: $sp-medium;
+    padding: 0 0 0 $sp-x-small;
+
+    &__item {
+      margin-top: $sp-xx-small;
+      padding-left: .8rem;
+      position: relative;
+
+      &::before {
+        background: $color-mid-light;
+        content: ' ';
+        display: block;
+        height: 1px;
+        left: -$sp-x-small;
+        pointer-events: none;
+        position: absolute;
+        top: .8rem;
+        width: .625rem;
+      }
+
+      &--group::after {
+        @include list-tree-icon;
+        background-image: url('#{$assets-path}52ee7ac2-tree-open.svg');
+      }
+    }
+
+    &__toggle {
+      background: transparent;
+      border: 0;
+      font-weight: normal;
+      margin: 0 0 0 -1.75rem;
+      padding: 0 0 0 1.75rem;
+      transition-duration: 0s;
+      width: auto;
+
+      &:hover {
+        background: transparent;
+        color: $color-link;
+        text-decoration: underline;
+      }
+
+      &:focus {
+        background: transparent;
+        outline: 1px dotted $color-mid-light;
+      }
+    }
+
+    .p-list-tree {
+      display: none;
+      margin-left: 0;
+
+      &[aria-hidden="false"] {
+        display: block;
+      }
+
+      &[aria-hidden="false"]::after {
+        @include list-tree-icon;
+        background-image: url('#{$assets-path}d705d8f6-tree-close.svg');
+        // At this point we need to push this icon above the --group icon.
+        z-index: 1;
+      }
+    }
+  }
+}
