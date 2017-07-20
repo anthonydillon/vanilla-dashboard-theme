@@ -5,7 +5,9 @@
 @import 'settings';
 
 // Import Base files, if needed
-@import 'icons';
+@import
+'base_forms',
+'icons';
 
 // Import Pattern files, if needed
 @import
@@ -19,6 +21,7 @@
 @mixin vanilla-dashboard-theme {
 
   //  Include Base mixins, if needed
+  @include theme-b-forms;
   @include theme-icons;
 
   //  Include Pattern mixins, if needed
