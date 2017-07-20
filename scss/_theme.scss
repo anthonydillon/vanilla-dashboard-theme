@@ -15,6 +15,7 @@
 'patterns_contextual-menu',
 'patterns_forms',
 'patterns_list-tree',
+'patterns_modal',
 'patterns_tabs',
 'patterns_tooltips';
 
@@ -31,6 +32,7 @@
   @include theme-p-contextual-menu;
   @include theme-p-forms;
   @include theme-p-list-tree;
+  @include theme-p-modal;
   @include theme-p-tabs;
   @include theme-p-tooltips;
 
