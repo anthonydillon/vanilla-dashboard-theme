@@ -11,8 +11,10 @@
 
 // Import Pattern files, if needed
 @import
+'patterns_accordion',
 'patterns_contextual-menu',
 'patterns_forms',
+'patterns_list-tree',
 'patterns_tabs',
 'patterns_tooltips';
 
@@ -25,8 +27,10 @@
   @include theme-icons;
 
   //  Include Pattern mixins, if needed
+  @include theme-p-accordion;
   @include theme-p-contextual-menu;
   @include theme-p-forms;
+  @include theme-p-list-tree;
   @include theme-p-tabs;
   @include theme-p-tooltips;
 
