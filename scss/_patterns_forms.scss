@@ -61,8 +61,9 @@
           display: inline-flex;
           width: auto;
 
-          + .p-form__group {
-            padding-left: $sp-small;
+          + .p-form__group,
+          + [class*="p-button"] {
+            margin-left: $sp-small;
           }
 
           .p-form__label,
@@ -89,10 +90,11 @@
             width: 0; // Removes any block level width
           }
         }
+      }
 
-        [class*="p-button"] {
-          flex: initial;
-        }
+      [class*="p-button"] {
+        flex: initial;
+        flex-shrink: 0;
       }
     }
   }
