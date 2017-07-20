@@ -1,0 +1,66 @@
+/// Icons
+@mixin theme-p-icons {
+
+  @mixin icon-size($size) {
+    height: $size;
+    width: $size;
+  }
+
+  %icon {
+    @include icon-size($sp-medium);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    text-indent: 999em;
+    vertical-align: middle;
+  }
+
+  .p-icon {
+
+    // Icon types
+    &--spinner {
+      @extend %icon;
+      background-image: url('#{$assets-path}65b70b84-spinner-dark-grey.svg');
+
+      &-white {
+        @extend %icon;
+        background-image: url('#{$assets-path}be6583dc-spinner-white.svg');
+      }
+    }
+
+    // Set a specific icon size
+    &--xx-small {
+      @include icon-size($sp-xx-small);
+    }
+
+    &--x-small {
+      @include icon-size($sp-x-small);
+    }
+
+    &--small {
+      @include icon-size($sp-small);
+    }
+
+    &--medium {
+      @include icon-size($sp-medium);
+    }
+
+    &--large {
+      @include icon-size($sp-large);
+    }
+
+    &--x-large {
+      @include icon-size($sp-x-large);
+    }
+
+    &--xx-large {
+      @include icon-size($sp-xx-large);
+    }
+
+    &--xxx-large {
+      @include icon-size($sp-xxx-large);
+    }
+  }
+}

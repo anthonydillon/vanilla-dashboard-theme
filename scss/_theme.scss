@@ -6,14 +6,14 @@
 
 // Import Base files, if needed
 @import
-'base_forms',
-'icons';
+'base_forms';
 
 // Import Pattern files, if needed
 @import
 'patterns_accordion',
 'patterns_contextual-menu',
 'patterns_forms',
+'patterns_icons',
 'patterns_list-tree',
 'patterns_modal',
 'patterns_tabs',
@@ -26,12 +26,12 @@
 
   //  Include Base mixins, if needed
   @include theme-b-forms;
-  @include theme-icons;
 
   //  Include Pattern mixins, if needed
   @include theme-p-accordion;
   @include theme-p-contextual-menu;
   @include theme-p-forms;
+  @include theme-p-icons;
   @include theme-p-list-tree;
   @include theme-p-modal;
   @include theme-p-tabs;
