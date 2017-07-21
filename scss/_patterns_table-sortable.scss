@@ -18,7 +18,11 @@
   }
 
   .p-table--sortable {
+    table-layout: fixed;
+
     th[role="columnheader"] {
+
+      .
 
       &[aria-sort] {
         align-items: center;
