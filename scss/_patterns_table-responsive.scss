@@ -1,0 +1,61 @@
+@import 'settings';
+
+@mixin theme-p-table-responsive {
+  .p-table--responsive {
+    @media screen and (max-width: $breakpoint-medium) {
+      thead {
+        display: none;
+      }
+
+      tr {
+        align-items: flex-end;
+        background: $color-x-light;
+        border: {
+          radius: 2px;
+          width: 0;
+        }
+        box-shadow: 0 1px 5px 1px transparentize($color-dark, .8);
+        display: flex;
+        flex: {
+          direction: column;
+          wrap: wrap;
+        }
+        justify-content: center;
+        padding: $sp-small;
+        width: 100%;
+
+        + tr {
+          margin-top: $sp-medium;
+        }
+      }
+
+      td {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+
+        + td {
+          padding-top: $sp-small;
+        }
+
+        &[aria-label] {
+          flex-basis: 50%;
+          max-width: 50%;
+          position: relative;
+          text-align: right;
+
+          &::before {
+            content: attr(aria-label);
+            display: block;
+            font-weight: 500;
+            height: 100%;
+            left: -100%;
+            position: absolute;
+            text-align: left;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
