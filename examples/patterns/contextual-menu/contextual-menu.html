@@ -8,11 +8,11 @@ category: _patterns
     <div class="row">
         <div class="col-12">
             <h1>Contextual menu</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi natus <span class="p-contextual-menu">
-                <a href="#" aria-haspopup="true">Link</a>
-                <span class="p-contextual-menu__dropdown" aria-hidden="false" aria-label="submenu">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi natus <span class="p-contextual-menu" role="menubar">
+                <button aria-haspopup="true" role="menuitem">Link</button>
+                <span class="p-contextual-menu__dropdown" aria-hidden="false" aria-label="submenu" role="menu">
                     <span class="p-contextual-menu__group">
-                        <button class="p-contextual-menu__link">Link</button>
+                        <a href="#" class="p-contextual-menu__link">Link</a>
                         <a href="#" class="p-contextual-menu__link">Link</a>
                         <a href="#" class="p-contextual-menu__link">Link</a>
                     </span>
@@ -30,9 +30,9 @@ category: _patterns
     <div class="row">
         <div class="col-12">
             <h2>Contextual menu - left</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi natus atque eligendi deleniti hic, dolores veritatis reiciendis <span class="p-contextual-menu p-contextual-menu--left">
-                <a href="#" aria-haspopup="true">Link</a>
-                <span class="p-contextual-menu__dropdown" aria-hidden="false" aria-label="submenu">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi natus atque eligendi deleniti hic, dolores veritatis reiciendis <span class="p-contextual-menu p-contextual-menu--left" role="menubar">
+                <button aria-haspopup="true" role="menuitem">Link</button>
+                <span class="p-contextual-menu__dropdown" aria-hidden="false" aria-label="submenu" role="menu">
                     <span class="p-contextual-menu__group">
                         <a href="#" class="p-contextual-menu__link">Link</a>
                         <a href="#" class="p-contextual-menu__link">Link</a>
@@ -51,9 +51,9 @@ category: _patterns
 <div class="strip">
     <div class="row">
         <h2>Contextual menu - center</h2>
-        <p>Lorem ipsum dolor sit amet <span class="p-contextual-menu p-contextual-menu--center">
-            <a href="#" aria-haspopup="true">Link</a>
-            <span class="p-contextual-menu__dropdown" aria-hidden="false" aria-label="submenu">
+        <p>Lorem ipsum dolor sit amet <span class="p-contextual-menu p-contextual-menu--left" role="menubar">
+            <button aria-haspopup="true" role="menuitem">Link</button>
+            <span class="p-contextual-menu__dropdown" aria-hidden="false" aria-label="submenu" role="menu">
                 <span class="p-contextual-menu__group">
                     <a href="#" class="p-contextual-menu__link">Link</a>
                     <a href="#" class="p-contextual-menu__link">Link</a>

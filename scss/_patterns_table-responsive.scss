@@ -56,6 +56,60 @@
           }
         }
       }
+
+      // Styles contextual menus differently with in responsive tables
+      .p-contextual-menu {
+        width: 100%;
+
+        // Initial menu item for actions should be hidden
+        [role="menuitem"] {
+          display: none;
+        }
+
+        &__dropdown {
+          box-shadow: none;
+          display: block;
+          max-width: 100%;
+          position: relative;
+
+          &::before {
+            display: none;
+          }
+        }
+
+        &__group {
+          padding: 0;
+
+          + .p-contextual-menu__group {
+            margin-top: $sp-small;
+            padding-top: $sp-small;
+          }
+        }
+
+        // Any link items should be styled as a button element
+        &__link {
+          border: {
+            color: $color-mid-light;
+            radius: .125rem;
+            style: solid;
+            width: 1px;
+          }
+          box-sizing: border-box;
+          cursor: pointer;
+          color: $color-x-dark;
+          display: block;
+          line-height: $sp-medium;
+          outline: none;
+          padding: $sp-small $sp-large;
+          text-align: center;
+          text-decoration: none;
+          width: 100%;
+
+          + .p-contextual-menu__link {
+            margin-top: $sp-x-small;
+          }
+        }
+      }
     }
   }
 }
