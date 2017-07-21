@@ -1,0 +1,75 @@
+---
+layout: default
+title: List tree
+category: _patterns
+---
+
+<div class="strip">
+  <div class="row">
+    <div class="col-12">
+      <h1>List tree</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <h2>Closed</h2>
+      <ul class="p-list-tree" aria-multiselectable="true" role="tablist">
+        <li class="p-list-tree__item p-list-tree__item--group">
+          <button class="p-list-tree__toggle" id="sub-1-btn" role="tab" aria-controls="sub-1" aria-expanded="false">/folder</button>
+          <ul class="p-list-tree" id="sub-1" role="tabpanel" aria-hidden="true" aria-labelledby="sub-1-btn">
+            <li class="p-list-tree__item">file</li>
+          </ul>
+        </li>
+        <li class="p-list-tree__item">
+          <a href="#" class="p-link--strong">charm-helpers-sync.yaml</a>
+        </li>
+        <li class="p-list-tree__item">
+          <a href="#" class="p-link--strong">config.yaml</a>
+        </li>
+        <li class="p-list-tree__item p-list-tree__item--group">
+          <button class="p-list-tree__toggle" id="sub-2-btn" role="tab" aria-controls="sub-2" aria-expanded="false">/files</button>
+          <ul class="p-list-tree" id="sub-2" role="tabpanel" aria-hidden="true" aria-labelledby="sub-2-btn">
+            <li class="p-list-tree__item">default_rsync</li>
+            <li class="p-list-tree__item">nagios_plugin.py</li>
+            <li class="p-list-tree__item p-list-tree__item--group">
+              <button class="p-list-tree__toggle" id="sub-3-btn" role="tab" aria-controls="sub-3" aria-expanded="false">/plugins</button>
+              <ul class="p-list-tree" id="sub-3" role="tabpanel" aria-hidden="true" aria-labelledby="sub-3-btn">
+                <li class="p-list-tree__item">check_mem.pl</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="col-6">
+      <h2>Open</h2>
+      <ul class="p-list-tree" aria-multiselectable="true" role="tablist">
+        <li class="p-list-tree__item p-list-tree__item--group">
+          <button class="p-list-tree__toggle" id="sub-4-btn" role="tab" aria-controls="sub-4" aria-expanded="true">/folder</button>
+          <ul class="p-list-tree" id="sub-4" role="tabpanel" aria-hidden="false" aria-labelledby="sub-4-btn">
+            <li class="p-list-tree__item">file</li>
+          </ul>
+        </li>
+        <li class="p-list-tree__item">
+          <a href="#" class="p-link--strong">charm-helpers-sync.yaml</a>
+        </li>
+        <li class="p-list-tree__item">
+          <a href="#" class="p-link--strong">config.yaml</a>
+        </li>
+        <li class="p-list-tree__item p-list-tree__item--group">
+          <button class="p-list-tree__toggle" id="sub-5-btn" role="tab" aria-controls="sub-5" aria-expanded="true">/files</button>
+          <ul class="p-list-tree" id="sub-5" role="tabpanel" aria-hidden="false" aria-labelledby="sub-5-btn">
+            <li class="p-list-tree__item">default_rsync</li>
+            <li class="p-list-tree__item">nagios_plugin.py</li>
+            <li class="p-list-tree__item p-list-tree__item--group">
+              <button class="p-list-tree__toggle" id="sub-6-btn" role="tab" aria-controls="sub-6" aria-expanded="true">/plugins</button>
+              <ul class="p-list-tree" id="sub-6" role="tabpanel" aria-hidden="false" aria-labelledby="sub-6-btn">
+                <li class="p-list-tree__item">check_mem.pl</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
