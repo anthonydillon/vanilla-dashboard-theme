@@ -41,6 +41,10 @@
         flex-basis: 100%;
         max-width: 100%;
 
+        &[aria-hidden="true"] {
+          display: none;
+        }
+        
         .row {
           max-width: 100%;
           padding: 0;

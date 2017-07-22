@@ -19,21 +19,9 @@ category: _patterns
             <td role="gridcell" aria-label="Users"class="u-align--right">8</td>
             <td role="gridcell" aria-label="Units" class="u-align--right">19</td>
             <td role="gridcell" class="u-align--right">
-                <span class="p-contextual-menu p-contextual-menu--left" role="menubar">
-                    <button aria-haspopup="true" role="menuitem">&#9776;</button>
-                    <span class="p-contextual-menu__dropdown" aria-hidden="true" aria-label="submenu" role="menu">
-                        <span class="p-contextual-menu__group">
-                            <a href="#" class="p-contextual-menu__link">Edit name</a>
-                            <a href="#" class="p-contextual-menu__link">Add users</a>
-                            <a href="#" class="p-contextual-menu__link">Add units</a>
-                        </span>
-                        <span class="p-contextual-menu__group">
-                            <a href="#" class="p-contextual-menu__link" style="color: red;">Delete&hellip;</a>
-                        </span>
-                    </span>
-                </span>
+                <button aria-controls="expanded-row" aria-expanded="true">Show</button>
             </td>
-            <td class="p-table-expanding__panel">
+            <td id="expanded-row" class="p-table-expanding__panel" aria-hidden="false">
                 <div class="row">
                     <div class="col-6">
                         <h2>Expanded table cell</h2>
