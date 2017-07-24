@@ -19,9 +19,9 @@ category: _patterns
             <td role="gridcell" aria-label="Users"class="u-align--right">8</td>
             <td role="gridcell" aria-label="Units" class="u-align--right">19</td>
             <td role="gridcell" class="u-align--right">
-                <button aria-controls="expanded-row" aria-expanded="true">Show</button>
+                <button aria-controls="expanded-row" aria-expanded="true" onClick="toggleHidden('expanded-row')">Show</button>
             </td>
-            <td id="expanded-row" class="p-table-expanding__panel" aria-hidden="false">
+            <td id="expanded-row" class="p-table-expanding__panel" aria-hidden="true">
                 <div class="row">
                     <div class="col-6">
                         <h2>Expanded table cell</h2>
@@ -48,3 +48,15 @@ category: _patterns
         </tr>
     </tbody>
 </table>
+
+<script>
+function toggleHidden(id) {
+  var attr = document.getElementById(id).attributes;
+
+  if (attr['aria-hidden'].value == "true") {
+    document.getElementById(id).setAttribute("aria-hidden", "false");
+  } else {
+    document.getElementById(id).setAttribute("aria-hidden", "true");
+  }
+}
+</script>
