@@ -29,11 +29,11 @@
 
       // aria-selected controls the open and closed state for the accordion tab
       &[aria-selected='true'] {
-        background-image: url('#{$assets-path}abbb2c52-Accordion-close.svg');
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' height='9' width='9' viewBox='0 0 9 9'%3E%3Cpath d='M0 5V4h9v1z' fill='%23888' fill-rule='evenodd'/%3E%3C/svg%3E");
       }
 
       &[aria-selected='false'] {
-        background-image: url('#{$assets-path}897f5f6c-Accordion-open.svg');
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' height='9' width='9' viewBox='0 0 9 9'%3E%3Cg fill='%23888' fill-rule='evenodd'%3E%3Cpath d='M4 0h1v9H4z'/%3E%3Cpath d='M0 5V4h9v1z'/%3E%3C/g%3E%3C/svg%3E");
       }
 
       &:focus {
