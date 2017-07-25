@@ -112,7 +112,8 @@ category: _patterns
 
         /**
          * Toggle function
-         * @param {String} toggle
+         * @param {Element} toggle
+         * @property {Boolean} open
          */
         function toggle (toggle, open) {
           var button = toggle.getAttribute('aria-controls');
@@ -129,8 +130,8 @@ category: _patterns
 
         /**
          * Toggle all function
-         * @param {String} target
-         * @param {String} toggles
+         * @event event
+         * @property {Element} target
          */
         function toggleAll (event) {
             var target = event.target;
@@ -145,13 +146,19 @@ category: _patterns
         }
 
         // Select all toggle control elements
+        /**
+         * @param {Object[]} toggles
+         * @param {String} tabCtrl
+         */
         var toggles = Array.prototype.slice.call(
           document.querySelectorAll(tabCtrl)
         );
 
+        // Set click event to each toggle control element
         /**
-         * Set click event to each toggle control element
-         * @param {String} toggle
+         * Triggers a toggleAll function
+         * @param {element} toggle
+         * @fires toggleAll
          */
         toggles.forEach(function (toggle) {
             toggle.addEventListener('click', toggleAll);
