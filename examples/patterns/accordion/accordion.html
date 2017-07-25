@@ -36,48 +36,58 @@ category: _patterns
      * @param {String} tabCtrl
      *
      * @example
-     * &lt;button class="p-accordion__tab" id="status-tab" role="tab" aria-controls="#status" aria-expanded="false"&gt;Status&lt;/button&gt;
+     * &lt;button class="p-accordion__tab" id="status-tab" role="tab" aria-controls="#status" aria-expanded="false" aria-selected="false"&gt;Status&lt;/button&gt;
      * &lt;section class="p-accordion__panel" id="status" role="tabpanel" aria-hidden="true" aria-labelledby="status-tab"&gt;
      *     &lt;p&gt;Closed panel&lt;/p&gt;
      * &lt;/section&gt;
      */
     function accordionToggles(tabCtrl) {
 
-        // Collapse function
-        function collapse (tab) {
-            var target = tab.getAttribute('aria-controls');
-            var panel = document.querySelector(target);
+        /**
+         * Toggle function
+         * @param {String} toggle
+         */
+        function toggle (toggle, open) {
+          var button = toggle.getAttribute('aria-controls');
+          var panel = document.querySelector(button);
 
-            panel.setAttribute('aria-hidden', true);
-            tab.setAttribute('aria-expanded', false);
+          if (open === true) {
+              panel.setAttribute('aria-hidden', false);
+              toggle.setAttribute('aria-expanded', true);
+          } else {
+              panel.setAttribute('aria-hidden', true);
+              toggle.setAttribute('aria-expanded', false);
+          }
         }
 
-        // Open function
-        function open (tab) {
-            var target = tab.getAttribute('aria-controls');
-            var panel = document.querySelector(target);
+        /**
+         * Toggle all function
+         * @param {String} target
+         * @param {String} toggles
+         */
+        function toggleAll (event) {
+            var target = event.target;
 
-            panel.setAttribute('aria-hidden', false);
-            tab.setAttribute('aria-expanded', true);
-        }
+            // Filter through all toggles and toggle visiblity
+            toggles.filter(function (toggle) {
+                return toggle !== target;
+            }).forEach(toggle);
 
-        // Collapse all tabs and content
-        function collapseAll (event) {
-            tabs.filter(function (tab) {
-                return tab !== event.target;
-            }).forEach(collapse);
-
-            open(this);
+            // Target toggle to be shown
+            toggle(target, true);
         }
 
         // Select all toggle control elements
-        var tabs = Array.prototype.slice.call(
+        var toggles = Array.prototype.slice.call(
           document.querySelectorAll(tabCtrl)
         );
 
-        // Set click event to each toggle control element
-        tabs.forEach(function (tab) {
-            tab.addEventListener('click', collapseAll);
+        /**
+         * Set click event to each toggle control element
+         * @param {String} toggle
+         */
+        toggles.forEach(function (toggle) {
+            toggle.addEventListener('click', toggleAll);
         });
     }
 
