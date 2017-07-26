@@ -1,7 +1,7 @@
 @import 'settings';
 
-@mixin theme-p-table-responsive {
-  .p-table--responsive {
+@mixin theme-p-table-mobile-card {
+  .p-table--mobile-card {
     @media screen and (max-width: $breakpoint-medium) {
       thead {
         display: none;
@@ -57,7 +57,7 @@
         }
       }
 
-      // Styles contextual menus differently with in responsive tables
+      // Styles contextual menus differently with in mobile-card tables
       .p-contextual-menu {
         width: 100%;
 
