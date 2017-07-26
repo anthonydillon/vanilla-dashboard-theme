@@ -28,11 +28,11 @@
       z-index: 2;
 
       // aria-selected controls the open and closed state for the accordion tab
-      &[aria-selected='true'] {
+      &[aria-expanded='true'] {
         background-image: url('#{$assets-path}abbb2c52-Accordion-close.svg');
       }
 
-      &[aria-selected='false'] {
+      &[aria-expanded='false'] {
         background-image: url('#{$assets-path}897f5f6c-Accordion-open.svg');
       }
 
