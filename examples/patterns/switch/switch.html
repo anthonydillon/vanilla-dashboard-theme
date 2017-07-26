@@ -4,10 +4,20 @@ title: Switch
 category: _patterns
 ---
 
-<form>
-    <label id="notify-email">Notify by email</label>
-    <button role="switch" aria-checked="true" aria-labelledby="notify-email">
-      <span>on</span>
-      <span>off</span>
-    </button>
-</form>
+<label id="notify-email" for="email">Switch - On</label>
+<button id="email" class="p-switch" role="switch" aria-checked="true" aria-labelledby="notify-email">
+  <span>On</span>
+  <span>Off</span>
+</button>
+
+<label id="notify-post" for="post">Switch - Off</label>
+<button id="post" class="p-switch" role="switch" aria-checked="false" aria-labelledby="notify-post">
+  <span>On</span>
+  <span>Off</span>
+</button>
+
+<label id="notify-text" for="text">Switch - Disabled</label>
+<button id="text" class="p-switch" role="switch" aria-checked="true" aria-labelledby="notify-text" disabled>
+  <span>On</span>
+  <span>Off</span>
+</button>
