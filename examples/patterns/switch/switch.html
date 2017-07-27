@@ -4,26 +4,26 @@ title: Switch
 category: _patterns
 ---
 
-<label id="notify-email" for="email">Switch - On</label>
-<button id="email" class="p-switch" role="switch" aria-checked="true" aria-labelledby="notify-email">
+<label id="switch-on-label" for="switch-on">Switch - On</label>
+<button id="switch-on" class="p-switch" type="button" role="switch" aria-checked="true" aria-labelledby="switch-on-label">
   <span>On</span>
   <span>Off</span>
 </button>
 
-<label id="notify-post" for="post">Switch - Off</label>
-<button id="post" class="p-switch" role="switch" aria-checked="false" aria-labelledby="notify-post">
+<label id="switch-off-label" for="switch-off">Switch - Off</label>
+<button id="switch-off" class="p-switch" type="button" role="switch" aria-checked="false" aria-labelledby="switch-off-label">
   <span>On</span>
   <span>Off</span>
 </button>
 
-<label id="notify-text" for="text">Switch - On disabled</label>
-<button id="text" class="p-switch" role="switch" aria-checked="true" aria-labelledby="notify-text" disabled>
+<label id="on-disabled-label" for="on-disabled">Switch - On disabled</label>
+<button id="on-disabled" class="p-switch" type="button" role="switch" aria-checked="true" aria-labelledby="on-disabled-label" disabled>
   <span>On</span>
   <span>Off</span>
 </button>
 
-<label id="notify-text" for="text">Switch - Off disabled</label>
-<button id="text" class="p-switch" role="switch" aria-checked="false" aria-labelledby="notify-text" disabled>
+<label id="off-disabled-label" for="off-disabled">Switch - Off disabled</label>
+<button id="off-disabled" class="p-switch" type="button" role="switch" aria-checked="false" aria-labelledby="off-disabled-label" disabled>
   <span>On</span>
   <span>Off</span>
 </button>
@@ -37,8 +37,8 @@ category: _patterns
      * @param {String} switchBtn
      *
      * @example
-     * &lt;label id="notify-post" for="post"&gt;Switch&lt;/label&gt;
-     * &lt;button id="post" class="p-switch" role="switch" aria-checked="false" aria-labelledby="notify-post"&gt;
+     * &lt;label id="switch-label" for="switch"&gt;Switch&lt;/label&gt;
+     * &lt;button id="switch" class="p-switch" type="button" role="switch" aria-checked="false" aria-labelledby="switch-label"&gt;
      *   &lt;span&gt;On&lt;/span&gt;
      *   &lt;span&gt;Off&lt;/span&gt;
      * &lt;/button&gt;
@@ -84,7 +84,7 @@ category: _patterns
      *
      * @example
      * <label id="switch-label" for="switch">Switch</label>
-     * <button id="switch" class="p-switch" role="switch" aria-checked="false" aria-labelledby="switch-label">
+     * <button id="switch" class="p-switch" type="button" role="switch" aria-checked="false" aria-labelledby="switch-label">
      *   <span>On</span>
      *   <span>Off</span>
      * </button>
