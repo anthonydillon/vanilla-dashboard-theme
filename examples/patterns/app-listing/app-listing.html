@@ -1,0 +1,387 @@
+---
+layout: default
+title: App listing
+category: _patterns
+---
+
+<style>
+  body {
+    margin: 0 !important;
+  }
+
+  .p-tabs {
+    margin: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+
+    .p-navigation .p-navigation__link > *,
+    .p-navigation--dark .p-navigation__link > * {
+      vertical-align: middle;
+    }
+
+    .p-form--inline {
+      width: 100%;
+    }
+
+    .p-form--inline .p-form__group {
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      width: auto;
+      align-self: flex-start;
+      flex: auto;
+    }
+
+    .p-form--inline .p-form__group .p-form__control {
+      display: inline-block;
+      margin: 0;
+      width: 100%;
+    }
+  }
+</style>
+
+<header id="navigation" class="p-navigation">
+  <div class="p-navigation__banner">
+    <div class="p-navigation__logo">
+      <a class="p-navigation__link" href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="25.2" viewBox="545.3 412.6 100 25.2"><title>MAAS logo</title><path fill="#E95420" d="M557.9 412.6c-7 0-12.6 5.7-12.6 12.6 0 7 5.7 12.6 12.6 12.6 7 0 12.6-5.7 12.6-12.6 0-7-5.6-12.6-12.6-12.6z"></path><g fill="#FFF"><path d="M563.8 419.2h-11.9c-.3 0-.5.2-.5.5v.7c0 .3.2.5.5.5h11.9c.3 0 .5-.2.5-.5v-.7c.1-.3-.2-.5-.5-.5zM563.8 422.6h-11.9c-.3 0-.5.2-.5.5v.7c0 .3.2.5.5.5h11.9c.3 0 .5-.2.5-.5v-.7c.1-.3-.2-.5-.5-.5zM563.8 426h-11.9c-.3 0-.5.2-.5.5v.7c0 .3.2.5.5.5h11.9c.3 0 .5-.2.5-.5v-.7c.1-.2-.2-.5-.5-.5zM563.8 429.4h-11.9c-.3 0-.5.2-.5.5v.7c0 .3.2.5.5.5h11.9c.3 0 .5-.2.5-.5v-.6c.1-.3-.2-.6-.5-.6z"></path></g><g fill="#FFF"><path d="M587.1 431.3c-.2-.4-.4-1-.7-1.7-.3-.7-.7-1.5-1.1-2.3-.4-.8-.8-1.7-1.2-2.5-.4-.9-.8-1.7-1.2-2.5l-1-2-.6-1.2c-.2 2.1-.4 4.4-.5 6.9-.1 2.5-.2 5.1-.3 7.8h-1.7c.2-3.2.3-6.3.5-9.2s.4-5.8.7-8.4h1.5c.5.9 1.1 1.8 1.6 2.9.6 1.1 1.2 2.3 1.7 3.5.6 1.2 1.1 2.4 1.7 3.5s1 2.2 1.4 3.1c.4-.9.9-2 1.4-3.1.5-1.2 1.1-2.3 1.7-3.5.6-1.2 1.1-2.4 1.7-3.5.6-1.1 1.1-2.1 1.6-2.9h1.5c.3 2.7.5 5.5.7 8.4s.4 6 .5 9.2h-1.8c-.1-2.7-.2-5.3-.3-7.8-.1-2.5-.3-4.8-.5-6.9l-.6 1.2-1 2c-.4.8-.8 1.6-1.2 2.5-.4.9-.8 1.7-1.2 2.5-.4.8-.7 1.6-1.1 2.3-.3.7-.6 1.3-.7 1.7h-1.5zM613.1 433.9c-.3-.9-.6-1.7-.9-2.5-.3-.8-.6-1.6-.8-2.3h-8.6c-.3.8-.6 1.5-.9 2.3-.3.8-.6 1.6-.9 2.5h-1.8c.7-1.8 1.3-3.6 1.9-5.1.6-1.6 1.2-3.1 1.8-4.5.6-1.4 1.1-2.8 1.7-4.1l1.8-3.9h1.5l1.8 3.9c.6 1.3 1.1 2.7 1.7 4.1.6 1.4 1.2 2.9 1.7 4.5.6 1.6 1.2 3.3 1.9 5.1h-1.9zm-6-15.7c-.6 1.5-1.3 3-1.9 4.5-.6 1.5-1.2 3.1-1.9 4.9h7.5c-.7-1.8-1.3-3.4-1.9-4.9-.6-1.6-1.2-3.1-1.8-4.5zM630.4 433.9c-.3-.9-.6-1.7-.9-2.5-.3-.8-.6-1.6-.8-2.3H620c-.3.8-.6 1.5-.9 2.3-.3.8-.6 1.6-.9 2.5h-1.8c.7-1.8 1.3-3.6 1.9-5.1.6-1.6 1.2-3.1 1.8-4.5.6-1.4 1.1-2.8 1.7-4.1l1.8-3.9h1.5l1.8 3.9c.6 1.3 1.1 2.7 1.7 4.1s1.2 2.9 1.7 4.5c.6 1.6 1.2 3.3 1.9 5.1h-1.8zm-6.1-15.7c-.6 1.5-1.3 3-1.9 4.5-.6 1.5-1.2 3.1-1.9 4.9h7.5c-.7-1.8-1.3-3.4-1.9-4.9-.5-1.6-1.1-3.1-1.8-4.5zM639.1 432.7c1.4 0 2.4-.3 3.2-.8.8-.5 1.1-1.3 1.1-2.4 0-.6-.1-1.2-.4-1.6-.2-.4-.6-.8-1-1.1s-.9-.6-1.4-.8c-.5-.2-1.1-.4-1.7-.7-.7-.3-1.4-.6-2-.9-.6-.3-1.1-.6-1.5-1-.4-.4-.7-.8-.9-1.3-.2-.5-.3-1.1-.3-1.7 0-1.5.5-2.7 1.5-3.4s2.4-1.2 4.2-1.2c.5 0 .9 0 1.4.1s.9.2 1.3.3c.4.1.8.2 1.1.4.3.1.6.3.8.4l-.6 1.5c-.5-.3-1.1-.6-1.8-.8s-1.5-.3-2.3-.3c-.6 0-1.1.1-1.5.2-.5.1-.9.3-1.2.5s-.6.6-.8.9c-.2.4-.3.8-.3 1.4 0 .5.1 1 .3 1.4.2.4.5.7.9 1 .4.3.8.5 1.3.7.5.2 1 .5 1.6.7.7.3 1.4.6 2 .9.6.3 1.2.6 1.6 1 .5.4.8.9 1.1 1.4.3.6.4 1.2.4 2.1 0 1.6-.6 2.8-1.7 3.6s-2.6 1.2-4.5 1.2c-.7 0-1.3 0-1.9-.1s-1.1-.2-1.5-.3c-.4-.1-.8-.3-1.1-.4-.3-.1-.5-.3-.7-.4l.6-1.5c.2.1.4.2.7.4.3.1.6.3 1 .4.4.1.8.2 1.3.3.6-.1 1.1-.1 1.7-.1z"></path></g></svg>
+      </a>
+    </div>
+    <a href="#navigation" class="p-navigation__toggle--open" title="menu">Menu</a>
+    <a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">Menu</a>
+  </div>
+  <nav class="p-navigation__nav">
+    <span class="u-off-screen">
+      <a href="#main-content">Jump to main content</a>
+    </span>
+    <ul class="p-navigation__links">
+      <li class="p-navigation__link"><a href="#">Nodes</a></li>
+      <li class="p-navigation__link"><a href="#">Pods</a></li>
+      <li class="p-navigation__link"><a href="#">Images</a></li>
+      <li class="p-navigation__link"><a href="#">DNS</a></li>
+      <li class="p-navigation__link"><a href="#">Zones</a></li>
+      <li class="p-navigation__link"><a href="#">Subnets</a></li>
+      <li class="p-navigation__link"><a href="#">Settings</a></li>
+    </ul>
+  </nav>
+</header>
+<div class="p-strip p-card">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="u-no-margin p-heading--two">Nodes <span class="p-heading--three"><span class="p-icon--spinner u-animation--spin"></span> Loading&hellip;</span></h1>
+    </div>
+  </div>
+</div>
+<nav class="p-tabs">
+  <ul class="p-tabs__list" role="tablist">
+    <li class="p-tabs__item" role="presentation">
+      <a href="#section1"
+          class="p-tabs__link"
+          tabindex="0"
+          role="tab"
+          aria-controls="#section1"
+          aria-selected="true">7 Machines</a>
+    </li>
+    <li class="p-tabs__item" role="presentation">
+      <a href="#section2"
+          class="p-tabs__link"
+          tabindex="-1"
+          role="tab">0 Devices</a>
+    </li>
+    <li class="p-tabs__item" role="presentation">
+      <a href="#section3"
+          class="p-tabs__link"
+          tabindex="-1"
+          role="tab">1 Controller</a>
+    </li>
+  </ul>
+</nav>
+<main class="p-strip">
+  <div class="row">
+    <aside class="col-3 p-card--highlighted">
+      <h3>Filter by</h3>
+      <div class="p-accordion" role="tablist">
+        <ul class="p-accordion__list">
+          <li class="p-accordion__group">
+            <button class="p-accordion__tab" id="owner-tab" role="tab" aria-controls="#owner" aria-expanded="true">Owner</button>
+            <div class="p-accordion__panel" id="owner" role="tabpanel" aria-hidden="false" aria-labelledby="#owner-tab">
+              <label>
+                <input type="checkbox"> Karl
+              </label>
+              <label>
+                <input type="checkbox"> Luke
+              </label>
+            </div>
+          </li>
+          <li class="p-accordion__group">
+            <button class="p-accordion__tab" id="status-tab" role="tab" aria-controls="#status" aria-expanded="false">Status</button>
+            <div class="p-accordion__panel" id="status" role="tabpanel" aria-hidden="true" aria-labelledby="#status-tab">
+              <label>
+                <input type="checkbox"> Commissioning
+              </label>
+              <label>
+                <input type="checkbox"> Ready
+              </label>
+            </div>
+          </li>
+          <li class="p-accordion__group">
+            <button class="p-accordion__tab" id="tags-tab" role="tab" aria-controls="#tags" aria-expanded="false">Power</button>
+            <div class="p-accordion__panel" id="tags" role="tabpanel" aria-hidden="true" aria-labelledby="#tags-tab">
+              <label>
+                <input type="checkbox"> On
+              </label>
+              <label>
+                <input type="checkbox"> Off
+              </label>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <div id="section1" class="col-8 prefix-1">
+      <form class="p-form p-form--inline col-12">
+        <div class="p-form__group">
+          <label for="search" class="p-form__label">Search nodes</label>
+          <input type="search" id="search" class="p-form__control">
+        </div>
+        <button type="button">Search</button>
+      </form>
+      <table class="p-table--sortable p-table--mobile-card" role="grid">
+        <thead>
+          <tr role="row">
+            <th scope="col" role="columnheader" id="t-name" aria-sort="none">FQDN</th>
+            <th scope="col" role="columnheader" id="t-users" aria-sort="none" class="u-align--right">Power</th>
+            <th scope="col" role="columnheader" id="t-units" aria-sort="none" class="u-align--right">Status</th>
+            <th scope="col" role="columnheader" id="t-revenue" aria-sort="none" class="u-align--right">Owner</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr role="row">
+            <td role="rowheader">Grape</td>
+            <td role="gridcell" class="u-align--right">Off</td>
+            <td role="gridcell" class="u-align--right">Ready</td>
+            <td role="gridcell" class="u-align--right">Karl</td>
+          </tr>
+          <tr role="row">
+            <td role="rowheader">Melon</td>
+            <td role="gridcell" class="u-align--right">On</td>
+            <td role="gridcell" class="u-align--right">Commissioning </td>
+            <td role="gridcell" class="u-align--right">Karl</td>
+          </tr>
+          <tr role="row">
+            <td role="rowheader">Apple</td>
+            <td role="gridcell" class="u-align--right">On</td>
+            <td role="gridcell" class="u-align--right">Ready</td>
+            <td role="gridcell" class="u-align--right">Luke</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</main>
+<footer class="p-footer" role="contentinfo">
+  <div class="row">
+    <p>MAAS name: <strong>designcloud1 MAAS</strong></p>
+    <p>MAAS version: <strong>2.3.0~alpha1 (6160-g492b78a-0ubuntu1~16.04.1)</strong></p>
+    <nav class="p-footer__nav" role="navigation">
+      <ul class="p-footer__links">
+        <li class="p-footer__item">
+          <a class="p-footer__link" href="#">View release notes</a>
+        </li>
+        <li class="p-footer__item">
+          <a class="p-footer__link" href="#">View documentation</a>
+        </li>
+      </ul>
+      <p>&copy; 2017 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+      <span class="u-off-screen">
+        <a href="#">Go to the top of the page</a>
+      </span>
+    </nav>
+  </div>
+</footer>
+
+
+<script>
+(function() {
+    /**
+     * Toggle target elements with aria controls, hidden and expanded
+     *
+     * @param {String} tabCtrl
+     *
+     * @example
+     * <button class="p-accordion__tab" id="status-tab" role="tab" aria-controls="#status" aria-expanded="false" aria-selected="false">Status</button>
+     * <section class="p-accordion__panel" id="status" role="tabpanel" aria-hidden="true" aria-labelledby="#status-tab">
+     *     <p>Closed panel</p>
+     * </section>
+     */
+    function accordionToggles(tabCtrl) {
+
+        /**
+         * Toggle function
+         * @param {Element} toggle
+         * @property {Boolean} open
+         */
+        function toggle (toggle, open) {
+          var button = toggle.getAttribute('aria-controls');
+          var panel = document.querySelector(button);
+
+          if (open === true) {
+              panel.setAttribute('aria-hidden', false);
+              toggle.setAttribute('aria-expanded', true);
+          } else {
+              panel.setAttribute('aria-hidden', true);
+              toggle.setAttribute('aria-expanded', false);
+          }
+        }
+
+        /**
+         * Toggle all function
+         * @event event
+         */
+        function toggleAll (event) {
+            var target = event.target;
+
+            // Filter through all toggles and toggle visiblity
+            toggles.filter(function (toggle) {
+                return toggle !== target;
+            }).forEach(toggle);
+
+            // Target toggle to be shown
+            toggle(target, true);
+        }
+
+        // Select all toggle control elements
+        /**
+         * @param {Object[]} toggles
+         * @param {String} tabCtrl
+         */
+        var toggles = Array.prototype.slice.call(
+          document.querySelectorAll(tabCtrl)
+        );
+
+        // Set click event to each toggle control element
+        /**
+         * Triggers a toggleAll function
+         * @param {element} toggle
+         * @fires toggleAll
+         */
+        toggles.forEach(function (toggle) {
+            toggle.addEventListener('click', toggleAll);
+        });
+    }
+
+    accordionToggles('.p-accordion__tab');
+
+    /**
+     * Sort a table by the column specified.
+     *
+     * @param {HTMLTableElement} table
+     * @param {Number} col
+     */
+    function sortTable(table, col) {
+      // For readability set the scope to the header.
+      var header = this;
+
+      // Helper 'contant'.
+      var SORTABLE_STATES = {
+        none: 0,
+        ascending: -1,
+        descending: 1,
+        ORDER: ['none', 'ascending', 'descending']
+      };
+
+      // Based on the current aria-sort, get the next state.
+      var newOrder = SORTABLE_STATES.ORDER.indexOf(header.getAttribute('aria-sort')) + 1;
+      newOrder = newOrder > SORTABLE_STATES.ORDER.length - 1 ? 0 : newOrder;
+      newOrder = SORTABLE_STATES.ORDER[newOrder];
+      var currentSort = table.querySelectorAll('[aria-sort]');
+
+      // Reset all header sorts.
+      for (var i = 0, ii = currentSort.length; i < ii; i += 1) {
+        currentSort[i].setAttribute('aria-sort', 'none');
+      }
+
+      // Set the new header sort.
+      header.setAttribute('aria-sort', newOrder);
+
+      // Get the direction of the sort and assume only one tbody.
+      // For this example only assume one tbody.
+      var direction = SORTABLE_STATES[newOrder];
+      var body = table.tBodies[0];
+
+      // Convert the HTML element list to an array.
+      var newRows = Array.prototype.slice.call(body.rows, 0);
+
+      // If the direction is 0 - aria-sort="none".
+      if (direction === 0) {
+        // Reset to the default order.
+        newRows.sort(function (a, b) {
+          return  a.getAttribute('data-index') - b.getAttribute('data-index');
+        });
+      } else {
+        newRows.sort(function (a, b) {
+          // Trim the cell contents.
+          var c = a.cells[col].textContent.trim();
+          var d = b.cells[col].textContent.trim();
+
+          // If the content contains a number, parse it as a number.
+          // This is very crude and should not be considered production ready.
+          if (c.replace(/[^0-9]/gi, '') !== '' && !isNaN(c.replace(/[^0-9]/gi, ''))) {
+            c = parseInt(c.replace(/[^0-9]/gi, ''));
+            // Ascending for numbers and the alphabet are opposite.
+            direction *= -1;
+          }
+          if (d.replace(/[^0-9]/gi, '') !== '' && !isNaN(d.replace(/[^0-9]/gi, ''))) {
+            d = parseInt(d.replace(/[^0-9]/gi, ''));
+            // Ascending for numbers and the alphabet are opposite.
+            direction *= -1;
+          }
+
+          // Based on the direction, do the sort.
+          if (direction === 1) {
+            return c < d;
+          } else {
+            return c > d;
+          }
+        });
+      }
+      // Append each row into the table, replacing the current elements.
+      for(var i = 0, ii = body.rows.length; i < ii; i += 1) {
+        body.appendChild(newRows[i]);
+      }
+    }
+
+    /**
+     * Create a sortable table from a table.
+     * @param {HTMLTableElement} table
+     */
+    function createSortableTable(table) {
+      // Select sortable column headers.
+      var clickableHeaders = table.querySelectorAll('[role="columnheader"][aria-sort]');
+      // For this example, assume only one tbody.
+      var rows = table.tBodies[0].rows;
+      // Set an index for the default order.
+      for (var row = 0, totalRows = rows.length; row < totalRows; row += 1) {
+        rows[row].setAttribute('data-index', row);
+      }
+
+      // Attach the click event for each header.
+      for (var i = 0, ii = clickableHeaders.length; i < ii; i += 1) {
+        // Ensure we bind the event to the header and pass the table and column.
+        clickableHeaders[i].addEventListener('click', sortTable.bind(clickableHeaders[i], table, i));
+      }
+    }
+
+    /**
+     * Make all --sortable tables on the page sortable.
+     */
+    function createSortableTables() {
+      var tables = document.querySelectorAll('table.p-table--sortable');
+      for (var i = 0, ii = tables.length; i < ii; i += 1) {
+        createSortableTable(tables[i]);
+      }
+    }
+
+    createSortableTables();
+  })()
+</script>
