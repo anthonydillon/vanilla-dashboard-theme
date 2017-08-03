@@ -9,7 +9,7 @@
   %icon {
     @include icon-size($sp-medium);
     background: {
-      color: $color-mid-dark;
+      color: currentColor;
       position: center;
       repeat: no-repeat;
       size: contain;
