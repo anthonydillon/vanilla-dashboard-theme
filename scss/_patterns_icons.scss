@@ -14,6 +14,7 @@
       repeat: no-repeat;
       size: contain;
     }
+    color: $color-mid-dark;
     display: inline-block;
     margin: 0;
     mask: {
@@ -169,6 +170,13 @@
 
     &--xxx-large {
       @include icon-size($sp-xxx-large);
+    }
+  }
+
+  .p-strip--dark {
+
+    [class^='p-icon'] {
+      color: $color-x-light;
     }
   }
 }
