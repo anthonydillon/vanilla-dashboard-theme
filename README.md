@@ -1,3 +1,9 @@
+# This codebase is no longer supported by the Canonical web team
+All themes are being migrated to Vanilla framework itself. Therefore, any amendments or additions to this theme should be submitted to Vanilla framework.
+https://github.com/vanilla-framework/vanilla-framework
+
+---
+
 # Vanilla Dashboard Theme
 
 This is the Vanilla Framework theme for dashboard based websites.
